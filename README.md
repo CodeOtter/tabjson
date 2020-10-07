@@ -117,8 +117,10 @@ sally                                               // This is new object with a
 
 ## Roadmap
 
-* Add support for object arrays (@ no colon)
-* Add path referencing ($)
-* Add inline function processing via () => {}
+* Add support for object arrays (`@ and no colon`)
+* Add path referencing (`$`)
+* Add inline function processing via `() => {}`
 * Add template literal support for new lines (`)
-* Add support for regex types (?)
+* Add support for regex types (`?`)
+* Add tests that make sure things work in weird cases
+* Add syntax error and recommendation detection
