@@ -112,27 +112,3 @@ const tabjson = (tree, delimiter = '  ') => {
 }
 
 module.exports = tabjson
-
-const list = tabjson(`bobby
-  #age: 18
-  email: bobby@somedude.com
-  @preferences: stew, brooms, ducks
-  wallet
-    #amount: 16
-    currency: USD
-sally
-  #age: 45
-  email: sally@angrymeds.com
-  @preferences: winning, internet fights, rainbows
-  pets
-    tommy
-      type: cat
-      #age: 3
-      #weight: 16
-    josephine
-      type: lizard
-      #age: 2
-      @likes: flies, lsd, jazz
-      @#favoriteNumbers: 7, 14`)
-
-console.log(JSON.stringify(list, null, 2))
