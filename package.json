@@ -1,0 +1,19 @@
+{
+  "name": "tabjson",
+  "version": "1.0.0",
+  "description": "Turns tab-spaced new lines into an array of populated objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "tab",
+    "json",
+    "white",
+    "space",
+    "spacing",
+    "convert"
+  ],
+  "author": "Patrick Ryan <patrick.ryan@codeotter.com>",
+  "license": "MIT"
+}
