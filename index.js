@@ -59,11 +59,6 @@ const tabjson = (tree, delimiter = '  ') => {
           : parseInt(data)
     }
 
-    console.log(label, '=====================')
-    console.log('colonPos', colonPos)
-    console.log('lastIndent', lastIndent)
-    console.log('indent', indent)
-
     // Prepare result entries
     if (colonPos === -1) {
       // No colon was found
@@ -77,7 +72,6 @@ const tabjson = (tree, delimiter = '  ') => {
       } else {
         if (lastIndent > indent) {
           // The indent has decreased to the left
-          console.log('Popping for', label)
           stack.pop()
         }
 
@@ -90,17 +84,14 @@ const tabjson = (tree, delimiter = '  ') => {
 
       if (lastIndent > indent) {
         // The indent has decreased to the left
-        console.log('Popping for', label)
         stack.pop()
       }
       
       const target = stack[stack.length - 1]
 
       if (target[label] instanceof Array) {
-        console.log('ARRAY PUSH')
         target[label].push(data)
       } else {
-        console.log('OBJECT ASSIGN')
         target[label] = data
       }
     } 

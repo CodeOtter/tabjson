@@ -4,7 +4,7 @@ Turns tab-spaced new lines into an array of populated objects without relying on
 
 ## Install
 
-`npm install tabjson --save` or `yard add tabjson --save`
+`npm install tabjson --save` or `yarn add tabjson --save`
 
 ## Example
 
