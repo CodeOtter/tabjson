@@ -7,7 +7,7 @@ const tabjson = (tree, delimiter = '  ') => {
   }
   const indentRegex = regexpCache[delimiter]
 
-  const lines = tree.split('\n')
+  const lines = tree.trim().split('\n')
   const result = []
   const stack = []
 
@@ -72,7 +72,9 @@ const tabjson = (tree, delimiter = '  ') => {
       } else {
         if (lastIndent > indent) {
           // The indent has decreased to the left
-          stack.pop()
+          for (let i = 0, len = (lastIndent - indent); i < len; i++) {
+            stack.pop()
+          }
         }
 
         // Extended child of stack element
@@ -84,7 +86,9 @@ const tabjson = (tree, delimiter = '  ') => {
 
       if (lastIndent > indent) {
         // The indent has decreased to the left
-        stack.pop()
+        for (let i = 0, len = (lastIndent - indent); i < len; i++) {
+          stack.pop()
+        }
       }
       
       const target = stack[stack.length - 1]
@@ -103,3 +107,10 @@ const tabjson = (tree, delimiter = '  ') => {
 }
 
 module.exports = tabjson
+
+const {
+  readFileSync
+} = require('fs')
+const contents = readFileSync('../landing-page-factory/accounts/bob-the-guy/spoopy/config.tson').toString()
+const json = tabjson(contents)
+console.log(json[1].introduction)
