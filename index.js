@@ -107,10 +107,3 @@ const tabjson = (tree, delimiter = '  ') => {
 }
 
 module.exports = tabjson
-
-const {
-  readFileSync
-} = require('fs')
-const contents = readFileSync('../landing-page-factory/accounts/bob-the-guy/spoopy/config.tson').toString()
-const json = tabjson(contents)
-console.log(json[1].introduction)

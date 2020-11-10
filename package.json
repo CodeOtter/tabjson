@@ -1,6 +1,6 @@
 {
   "name": "tabjson",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Turns tab-spaced new lines into an array of populated objects.",
   "repository": {
     "type": "git",
